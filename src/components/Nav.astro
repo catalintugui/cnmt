@@ -2,14 +2,21 @@
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
+];
+
+const navItemGhPages = [
+  { name: 'Home', href: '/cnmt' },
+  { name: 'About', href: '/cnmt/about' },
+  { name: 'Projects', href: '/cnmt/projects' },
+  { name: 'Contact', href: '/cnmt/contact' },
 ];
 ---
 
 <nav>
   <ul>
-    {navItems.map((item) => (
+    {navItemGhPages.map((item) => (
       <li><a href={item.href}>{item.name}</a></li>
     ))}
   </ul>
