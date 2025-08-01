@@ -1,0 +1,40 @@
+---
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+
+<nav>
+  <ul>
+    {navItems.map((item) => (
+      <li><a href={item.href}>{item.name}</a></li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  nav {
+    background-color: #f0f0f0;
+    padding: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
